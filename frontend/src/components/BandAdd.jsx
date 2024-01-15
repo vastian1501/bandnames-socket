@@ -1,8 +1,9 @@
-import { useSocket } from "../hooks/useSocket"
+import { useContext } from "react"
+import { SocketContext } from "../context/SocketContext"
 
 const BandAdd = () => {
 
-  const { socket } = useSocket('http://localhost:8080')
+  const { socket } = useContext( SocketContext )
 
   const addBand = (e) => {
     e.preventDefault()
